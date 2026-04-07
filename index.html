@@ -3,42 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewa Student</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mewa Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 font-sans">
-    <header class="bg-[#0047AB] text-white p-6 shadow-md">
-        <h1 class="text-2xl font-bold">Mewa Student</h1>
-        <p class="text-sm opacity-90">Student: Mohammed Naufan</p>
-    </header>
+<body class="bg-dark">
 
-    <main class="p-4 space-y-6">
-        <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
-            <h2 class="text-[#0047AB] font-bold mb-4 border-b pb-2 text-lg">Attendance & Faculty</h2>
-            <div class="space-y-4 text-sm">
-                <div>
-                    <div class="flex justify-between font-medium"><span>Adv. Financial Accounting</span><span>88%</span></div>
-                    <p class="text-xs text-gray-500 italic">Prof. Sumana (HOD)</p>
+    <div class="dashboard-wrapper">
+        
+        <div class="row row-1">
+            <div class="card card-graph neo-inset">
+                <h2 class="card-title">Attendance History (Overall)</h2>
+                <div class="graph-container">
+                    <div class="graph-placeholder">[ Attendance Graph ]</div>
                 </div>
-                <div>
-                    <div class="flex justify-between font-medium"><span>Human Resource Mgmt.</span><span>92%</span></div>
-                    <p class="text-xs text-gray-500 italic">Prof. Seema</p>
+                <div class="info-tag neo-inset-light">Last Sem: 88%</div>
+            </div>
+
+            <div class="profile-grid">
+                <div class="icon-group">
+                    <div class="card card-icon neo-flat">+</div>
+                    <div class="card card-icon neo-flat">-</div>
+                    <div class="card card-icon neo-flat">👤</div>
+                    <div class="card card-icon neo-flat">⚙️</div>
+                    <div class="card card-icon neo-flat">...</div>
+                    <div class="card card-icon neo-flat"><-</div>
                 </div>
-                <div>
-                    <div class="flex justify-between font-medium"><span>Business Regulation</span><span>79%</span></div>
-                    <p class="text-xs text-gray-500 italic">Prof. Chinmay</p>
+                <div class="profile-meta">
+                    <div class="card input-field neo-inset">Student: Mohammed Naufan</div>
+                    <div class="card input-field neo-inset">College: [College Name]</div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
-            <h2 class="text-[#0047AB] font-bold mb-4 border-b pb-2 text-lg">Karnataka Holidays</h2>
-            <ul class="text-sm space-y-2">
-                <li class="flex justify-between"><span>Dr. Ambedkar Jayanti</span><span class="font-bold">April 14</span></li>
-                <li class="flex justify-between"><span>May Day</span><span class="font-bold">May 1</span></li>
-                <li class="flex justify-between"><span>Kannada Rajyotsava</span><span class="font-bold">Nov 1</span></li>
-            </ul>
-        </section>
-    </main>
+        <div class="row row-2">
+            <div class="card card-circles neo-flat">
+                <div class="circle neo-inset"><span>88%</span><p>Adv. Acc.</p></div>
+                <div class="circle neo-inset"><span>92%</span><p>HRM</p></div>
+                <div class="circle neo-inset"><span>79%</span><p>Bus. Reg.</p></div>
+            </div>
+
+            <div class="card card-performance neo-inset">
+                <h3 class="card-title-small">Performance (Max/Min)</h3>
+                <div class="bar-chart">
+                    <div class="bar-col"><div class="bar-fill neo-inset" style="height: 88%"></div><p>Acc.</p></div>
+                    <div class="bar-col"><div class="bar-fill neo-inset" style="height: 92%"></div><p>HRM</p></div>
+                    <div class="bar-col"><div class="bar-fill neo-inset" style="height: 79%"></div><p>Reg.</p></div>
+                </div>
+            </div>
+
+            <div class="card card-faculty neo-flat">
+                <div class="faculty-wrapper">
+                    <div class="faculty-header">
+                        <div class="faculty-avatar neo-inset">👤</div>
+                        <div class="faculty-meta">
+                            <h4>Prof. Sumana (HOD)</h4>
+                            <p>Primary Faculty (Accounting)</p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="faculty-body">
+                        <p>Exam Performance Index</p>
+                        <div class="faculty-rating">Rating: <span class="rating neo-inset-light">5.0 ★</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-3">
+            <div class="card card-slider neo-inset">
+                <div class="slider-control neo-flat"></div>
+            </div>
+            
+            <div class="card card-report neo-flat-accent">View Detailed Report</div>
+        </div>
+
+    </div>
+
 </body>
 </html>
